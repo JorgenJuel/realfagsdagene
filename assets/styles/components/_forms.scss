@@ -1,0 +1,169 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+
+$formfont: inherit;
+
+// Gravity form
+.gform{
+  &_wrapper{
+    max-width: 600px;
+    .gform_title{
+      margin-bottom: 15px;
+    }
+  }
+  &_fields{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &_footer{
+    text-align: right;
+    input[type="submit"]{
+      border: 2px solid $logo_2;
+      width: 100%;
+      margin-bottom: 10px;
+      box-shadow: none;
+      color: #fff;
+      background: $logo_2;
+      font-size: 16px;
+      padding:6px 12px;
+      text-align: left;
+      cursor: pointer;
+      font-family: $formfont;
+      display: inline-block;
+      transition: .3s ease-in-out all;
+      &:focus, &:hover{
+        background: #fff;
+        color: $logo_2;
+      }
+      @include media-breakpoint-up(md){
+        font-size: 20px;
+        width: auto;
+      }
+    }
+  }
+}
+.gfield{
+  position: relative;
+  margin-bottom: 10px;
+  @include media-breakpoint-up(md){
+    margin-bottom: 15px;
+  }
+  &_hidden{
+    display: none;
+  }
+  &_label{
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: $formfont;
+    opacity: 1;
+    color: #fff;
+    transition: .3s ease-in-out;
+    @include media-breakpoint-up(md){
+      font-size: 20px;
+    }
+    .gfield--active &{
+      top: 8px;
+      font-size: 12px;
+      line-height: 12px;
+      @include media-breakpoint-up(md){
+        font-size: 12px;
+      }
+    }
+    .hide-label &{
+      display: none;
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"]{
+    width: 100%;
+    background: transparent;
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 16px 12px 4px;
+    font-family: $formfont;
+    @include media-breakpoint-up(md){
+      font-size: 18px;
+    }
+  }
+  textarea{
+    width: 100%;
+    background: transparent;
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 16px 12px 4px;
+    font-family: $formfont;
+    @include media-breakpoint-up(md){
+      font-size: 18px;
+    }
+  }
+  &_checkbox{
+    padding: 0;
+    list-style: none;
+    margin: 10px 0;
+    li{
+      display: inline-block;
+      margin-right: 20px;
+    }
+    label{
+      font-size: 16px;
+      color: $brand-primary;
+      opacity: 0.5;
+      line-height: 40px;
+      position: relative;
+      @include media-breakpoint-up(md){
+        font-size: 24px;
+      }
+      &::before{
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $brand-primary;
+        margin-right: 10px;
+      }
+      &::after{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        transition: all .1s ease-in-out;
+        width: 0;
+        height: 0;
+        content: "";
+        background: $brand-primary;
+      }
+    }
+    input[type="checkbox"]{
+      display: none;
+      &:checked + label{
+        &::after{
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

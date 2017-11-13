@@ -50,17 +50,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "arrangement"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510606555
+    "modified": 1510606782
 }

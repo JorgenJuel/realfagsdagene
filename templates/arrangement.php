@@ -8,12 +8,12 @@
   <div class="arrangement__tekst">
     <div class="arrangement__topptekst">
       <h3><?php the_title(); ?></h3>
-      <h4><?php echo get_field('underfelt')? : 'Matematikk og menneskelig fantasi'; ?></h4>
+      <h4><?php the_field('underfelt'); ?></h4>
     </div>
     <div class="arrangement__deler">
     </div>
     <div class="arrangement__bunntekst">
-      <span class="arrangement__bunntekst__tidspunkt">Torsdag 3. Mars 14:15</span>
+      <span class="arrangement__bunntekst__tidspunkt"><?php the_field('tidspunkt'); ?></span>
       <span class="arrangement__bunntekst__knapp">Vis mer</span>
       <div class="arrangement__bunntekst__ekstra">
         <?php the_content(); ?>

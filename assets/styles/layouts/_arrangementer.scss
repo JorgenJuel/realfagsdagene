@@ -76,7 +76,8 @@
     }
     &__bilde{
       align-items: top;
-      width: 400px;
+      width: 300px;
+      flex: 0 0 auto;
       height: auto;
       .arrangement--right &{
         order: 2;

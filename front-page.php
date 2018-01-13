@@ -1,30 +1,22 @@
-<section class="full full--transparent"  style="background-image: url('/wp-content/themes/realfagsdagene/dist/images/bakgrunn.png')">
+<?php while (have_posts()) : the_post(); ?>
+  <section class="full full--transparent"  style="background-image: url('/wp-content/themes/realfagsdagene/dist/images/bakgrunn.png')">
   <div class="resten">
     <?php get_template_part( 'templates/logo' ); ?>
-    <h1>1. til 3. Mars 2018</h1>
+    <h1><?php the_field('tittel'); ?></h1>
   </div>
-  <?php $bedrifter = false; ?>
-  <?php if($bedrifter): ?>
-  <div class="bedrifter">
-    <img src="/wp-content/themes/realfagsdagene/dist/images/ffi.png" class="bedrifter__bilde">
-    <img src="/wp-content/themes/realfagsdagene/dist/images/gjensidige.png" class="bedrifter__bilde">
-    <img src="/wp-content/themes/realfagsdagene/dist/images/sp-fire.png" class="bedrifter__bilde">
-    <img src="/wp-content/themes/realfagsdagene/dist/images/sintef.png" class="bedrifter__bilde">
-  </div>
+  <?php if(have_rows('bedrifter')): ?>
+    <div class="bedrifter">
+    <?php while(have_rows('bedrifter')): the_row(); ?>
+      <?php echo wp_get_attachment_image( get_sub_field('logo'), 'full', false, ['class' => 'bedrifter__bilde'] ); ?>
+    <?php endwhile; ?>
+    </div>
   <?php endif; ?>
 </section>
 <section class="full full--center">
   <div class="innhold">
-    <p>Målet med realfagsdagene er å motivere og inspirere lidenskap for naturvitenskap. Vi ønsker å motivere studenter fra hele landet til å skaffe seg en karrierere innen vitenskap og teknologi. Dette gjør vi ved å skape nysgjerrighet og fasinering rundt menneskeskapte og naturlige undere, fra livets opprinnelse til utforskingen av verdensrommet og kosmos.</p>
+    <?php the_content(); ?>
   </div>
 </section>
-<?php /*
-<section class="full full--center">
-  <div class="foredragsholdere">
-    <h2>Foredragsholdere</h2>
-    <p>Kommer snart...</p>
-  </div>
-</section>*/ ?>
 <?php
   $args = ['post_type' => 'foredragsholder', 'posts_per_page' => -1];
   $foredragsholdere = new WP_Query($args);
@@ -41,6 +33,7 @@
   </div>
 </section>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 <div class="fullskjerm" id="foredragsmodal">
   <button class="fullskjerm__lukk"></button>
@@ -151,3 +144,5 @@
     </div>
   </div>
 </div>
+
+<?php endwhile; ?>

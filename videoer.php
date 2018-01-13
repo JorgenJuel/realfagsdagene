@@ -6,7 +6,7 @@
 
 <?php while (have_posts()) : the_post(); ?>
   <div class="full full--side">
-    <div class="innhold">
+    <div class="innhold innhold--stor">
       <?php the_content(); ?>
       <?php $videoer = get_field('videoer'); ?>
       <?php if($videoer): ?>

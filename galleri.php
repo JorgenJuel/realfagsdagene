@@ -8,16 +8,16 @@
   <div class="full full--side">
     <div class="innhold">
       <?php the_content(); ?>
-      <?php $bilder = get_field('bilder'); ?>
-      <?php if($bilder): ?>
-      <div class="bildegalleri">
-        <?php foreach ($bilder as $bilde): ?>
+      <?php while(have_rows('bildegallerier')): the_row(); ?>
+        <h2 class="overskrift overskrift--senter"><?php the_sub_field('bildetittel'); ?></h2>
+        <div class="bildegalleri">
+        <?php foreach (get_sub_field('bilder') as $bilde): ?>
           <a href="<?php echo $bilde['url']; ?>" class="bildegalleri__bilde fancybox" rel="bildegalleri">
             <?php echo wp_get_attachment_image( $bilde['ID'], 'kvadrat' ); ?>
           </a>
         <?php endforeach; ?>
-      </div>
-      <?php endif; ?>
+        </div>
+      <?php endwhile; ?>
     </div>
   </div>
 <?php endwhile; ?>

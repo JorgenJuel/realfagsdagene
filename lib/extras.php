@@ -49,3 +49,8 @@ function custom_query_vars( $query ) {
   return $query;
 }
 add_action( 'pre_get_posts', __NAMESPACE__ . '\\custom_query_vars' );
+
+
+if(function_exists('acf_add_options_page')){
+  acf_add_options_page();
+}

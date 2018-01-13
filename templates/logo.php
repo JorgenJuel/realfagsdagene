@@ -1,4 +1,4 @@
-<div class="hovedlogo">
+<a href="/" class="hovedlogo">
 <svg width="881px" height="923px" viewBox="0 0 881 923" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="realfagsdagene">
             <g id="indre_sirkel" transform="translate(262.000000, 206.000000)" fill="#FE6F48">
@@ -92,4 +92,4 @@
     <h1>Realfagsdagene</h1>
     <h2>Trondheim Science Week</h2>
   </div>
-</div>
+</a>

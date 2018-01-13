@@ -1,7 +1,6 @@
 
-<section class="full full--center" style="background-image: url('/wp-content/themes/realfagsdagene/dist/images/oss.png')">
+<section class="full full--center" style="background-image: url(<?php echo wp_get_attachment_url( get_field('bunnbilde', 'option')); ?> );)">
   <div class="innhold innhold--senter">
-    <p>Realfagsdagene er et arrengement arrangert av Delta, linjeforeningen for matematikk og fysikk ved NTNU.<br>
-Neste års realfagsdager vil være fra 1. til 3. Mars 2018.</p>
+  	<?php the_field('bunntekst', 'option'); ?>
   </div>
 </section>

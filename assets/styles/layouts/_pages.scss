@@ -66,6 +66,9 @@
   z-index: 85;
   max-width: 100%;
   margin-top: 20px;
+  &:hover, &:focus, &:active{
+    outline: none;
+  }
   @include media-breakpoint-up(sm){
     margin-top: 0;
   }
@@ -304,6 +307,13 @@
     text-align:center;
   }
 }
+.overskrift{
+  font-size: 42px;
+  margin-bottom: 30px;
+  &--senter{
+    text-align: center;
+  }
+}
 .sidebilde{
   margin-bottom: 15px;
   img{
@@ -530,6 +540,7 @@
 
 .bildegalleri{
   width: 100%;
+  margin-bottom: 40px;
   &__bilde{
     width: 100%;
     margin-bottom: 20px;
@@ -544,7 +555,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
-    margin: 0 -10px;
+    margin: 0 -10px 80px;
     &__bilde{
       width: 30%;
       width: calc((100% / 3) - 20px);
@@ -567,7 +578,7 @@
       max-width: 100%;
       height: auto;
       @include media-breakpoint-up(lg){
-        height: 150px;
+        height: 200px;
       }
     }
     @include media-breakpoint-up(lg){

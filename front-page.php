@@ -2,7 +2,7 @@
   <?php if(get_field('video')): ?>
 
   <section class="full full--transparent full--bgvideo">
-    <video poster="<?php echo wp_get_attachment_image_url( get_field('bakgrunn'), 'full' ); ?>" autoplay="true">
+    <video poster="<?php echo wp_get_attachment_image_url( get_field('bakgrunn'), 'full' ); ?>" autoplay="true" loop="true">
   <source
     src="<?php the_field('video_webm'); ?>"
     type="video/webm">

@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5a5a199d46d9b",
-            "label": "tittel",
+            "label": "Tittel",
             "name": "tittel",
             "type": "text",
             "instructions": "",
@@ -67,6 +67,100 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a79e0bec111a",
+            "label": "Bakgrunn",
+            "name": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a79e0a6c1119",
+            "label": "Video",
+            "name": "video",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Vis video som bakgrunn",
+            "default_value": 0
+        },
+        {
+            "key": "field_5a79e0d2c111b",
+            "label": "Video WebM",
+            "name": "video_webm",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a79e0a6c1119",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "webm"
+        },
+        {
+            "key": "field_5a79e0ebc111c",
+            "label": "Video MP4",
+            "name": "video_mp4",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a79e0a6c1119",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
         }
     ],
     "location": [
@@ -86,5 +180,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515854410
+    "modified": 1517936899
 }

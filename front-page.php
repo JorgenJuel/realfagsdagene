@@ -1,5 +1,18 @@
 <?php while (have_posts()) : the_post(); ?>
-  <section class="full full--transparent"  style="background-image: url('/wp-content/themes/realfagsdagene/dist/images/bakgrunn.png')">
+  <?php if(get_field('video')): ?>
+
+  <section class="full full--transparent full--bgvideo">
+    <video poster="<?php echo wp_get_attachment_image_url( get_field('bakgrunn'), 'full' ); ?>" autoplay="true">
+  <source
+    src="<?php the_field('video_webm'); ?>"
+    type="video/webm">
+  <source
+    src="<?php the_field('video_mp4'); ?>"
+    type="video/mp4">
+    </video>
+  <?php else: ?>
+  <section class="full full--transparent"  style="background-image: url(<?php echo wp_get_attachment_image_url( get_field('bakgrunn'), 'full' ); ?>)">
+  <?php endif; ?>
   <div class="resten">
     <?php get_template_part( 'templates/logo' ); ?>
     <h1><?php the_field('tittel'); ?></h1>

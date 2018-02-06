@@ -204,6 +204,16 @@
   &--transparent{
     background-color: transparent;
   }
+  &--bgvideo{
+    position: relative;
+    video{
+      height: 100%;
+      width: 100%;
+      border: none;
+      position: absolute;
+      z-index: -2;
+    }
+  }
   &--iframevideo{
     position: relative;
     iframe{

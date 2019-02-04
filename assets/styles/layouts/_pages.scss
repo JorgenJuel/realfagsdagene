@@ -188,7 +188,7 @@
     margin-top: 40px;
   }
 }
-.full{
+.full {
   width: 100%;
   background: no-repeat 50% 50% fixed $sort;
   background-size: cover;
@@ -198,15 +198,15 @@
     align-items: center;
     flex-direction: column;
   }
-  &--center{
+  &--center {
     justify-content: center;
   }
-  &--transparent{
+  &--transparent {
     background-color: transparent;
   }
-  &--bgvideo{
+  &--bgvideo {
     position: relative;
-    video{
+    video {
       height: 100%;
       width: 100%;
       border: none;
@@ -288,6 +288,27 @@
     }
   }
 }
+
+.billettknapp {
+  background: $logo_2;
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 16px 14px;
+  text-align: center;
+  margin-top: 20px;
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    width: 250px;
+    bottom: 50px;
+    margin-top: 0;
+    left: 50%;
+    margin-left: -125px;
+  }
+}
+
 .foredragsholdere{
   text-align: center;
   h2{

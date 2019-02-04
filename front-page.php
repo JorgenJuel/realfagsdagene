@@ -24,6 +24,12 @@
     <?php endwhile; ?>
     </div>
   <?php endif; ?>
+
+  <?php if(get_field('billettekst')): ?>
+  <a href="<?php the_field('billettlenke'); ?>" target="_blank" class="billettknapp">
+    <?php the_field('billettekst'); ?>    
+  </a>
+  <?php endif; ?>
 </section>
 <section class="full full--center">
   <div class="innhold">

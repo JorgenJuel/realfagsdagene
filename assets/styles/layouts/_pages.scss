@@ -630,3 +630,87 @@
     }
   } 
 }
+
+.sidefelt {
+  background: $logo_2;
+  padding: 15px;
+  color: #fff;
+
+  hr {
+    border-color: #fff;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 25px;
+
+    &--mobil {
+      display: none;
+    }
+  }
+}
+
+.bedriftsoversikt {
+  margin-top: 40px;
+
+  &__bedrift {
+    margin-bottom: 40px;
+
+    &__logo {
+      padding: 15px;
+      background: #f7f7f7;
+      margin-bottom: 20px;
+      border: 10px #e3e3e3 solid;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+
+      &__logo {
+        width: 250px;
+        max-width: 35%;
+        flex: 1 0 250px;
+      }
+
+      &__tekst {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .innhold--sidefelt {
+    display: block;
+    padding-right: 300px;
+    box-sizing:border-box;
+    width: 100%;
+    position: relative;
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 420px;
+    }
+  }
+
+  .sidefelt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+
+    @include media-breakpoint-up(xl) {
+      width: 375px;
+    }
+  }
+}
